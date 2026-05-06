@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing Samples</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1714;
+      --muted: #6b6560;
+      --rule: #d9d3cc;
+      --cream: #f7f4f0;
+      --accent: #b5410a;
+      --card-bg: #ffffff;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      padding: 0 1.5rem;
+    }
+
+    /* ── Masthead ── */
+    header {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 4.5rem 0 2rem;
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .masthead-label {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    header p {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 480px;
+      line-height: 1.65;
+    }
+
+    /* ── Cards ── */
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 0 6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      padding: 2.2rem 2.4rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0 2rem;
+      align-items: start;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: rise 0.55s ease forwards;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      border-color: var(--ink);
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.25s; }
+
+    @keyframes rise {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-meta {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.65rem;
+    }
+
+    .card h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      font-size: 1.35rem;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+      grid-column: 1;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    .card-left {
+      grid-column: 1;
+    }
+
+    .card-right {
+      grid-column: 2;
+      grid-row: 1 / 3;
+      display: flex;
+      align-items: flex-start;
+      padding-top: 0.2rem;
+    }
+
+    .read-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--ink);
+      padding: 0.55rem 1.1rem;
+      white-space: nowrap;
+      transition: background 0.18s, color 0.18s;
+    }
+
+    .read-btn:hover {
+      background: var(--ink);
+      color: var(--cream);
+    }
+
+    .read-btn svg {
+      width: 11px;
+      height: 11px;
+      flex-shrink: 0;
+    }
+
+    /* ── Rule between cards ── */
+    .divider {
+      height: 1px;
+      background: var(--rule);
+      display: none;
+    }
+
+    /* ── Footer ── */
+    footer {
+      max-width: 780px;
+      margin: 0 auto;
+      padding-bottom: 2.5rem;
+      border-top: 1px solid var(--rule);
+      padding-top: 1.2rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 540px) {
+      .card {
+        grid-template-columns: 1fr;
+        padding: 1.6rem;
+      }
+      .card-right {
+        grid-column: 1;
+        grid-row: auto;
+        margin-top: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <p class="masthead-label">Writing Samples</p>
+    <h1>Selected Work</h1>
+    <p>Two pieces spanning energy policy and cultural criticism, produced as part of an independent writing portfolio.</p>
+  </header>
+
+  <main>
+
+    <article class="card">
+      <div class="card-left">
+        <p class="card-meta">Op-Ed &nbsp;·&nbsp; Energy Policy</p>
+        <h2>Canada's Clean Grid Has a Rainy-Day Problem</h2>
+        <p>
+          Canada's electricity grid is among the cleanest in the world — but its low-emissions record depends heavily on hydroelectric availability. This piece examines the structural gap that emerges when hydro underperforms, and why electrification may widen that gap before it narrows it.
+        </p>
+      </div>
+      <div class="card-right">
+        <a class="read-btn" href="Hydro_Op-Ed.pdf" target="_blank">
+          Read
+          <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-left">
+        <p class="card-meta">Essay &nbsp;·&nbsp; Culture &amp; Media</p>
+        <h2>The Anatomy of Barbenheimer as a Phenomenon and Lesson</h2>
+        <p>
+          The summer of 2023 produced one of the most unexpected cultural events in recent Hollywood history. This essay examines what made "Barbenheimer" work, why it can't simply be replicated, and what its underlying logic means for the future of the blockbuster.
+        </p>
+      </div>
+      <div class="card-right">
+        <a class="read-btn" href="Barbenheimer_Article.pdf" target="_blank">
+          Read
+          <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    Portfolio &nbsp;·&nbsp; Writing Samples
+  </footer>
+
+</body>
+</html>
