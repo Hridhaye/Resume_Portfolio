@@ -10,13 +10,13 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
- --ink: #10161b;
-  --muted: #4f5b63;
-  --rule: #cfd4d7;
-  --cream: #eef1f3;
-  --accent: #315f68;
-  --white: #f7f8f9;
-  --tint: #e3e8ea;
+      --ink: #10161b;
+      --muted: #4f5b63;
+      --rule: #cfd4d7;
+      --cream: #eef1f3;
+      --accent: #315f68;
+      --white: #f7f8f9;
+      --tint: #e3e8ea;
     }
     html { font-size: 16px; scroll-behavior: smooth; }
     body {
@@ -34,9 +34,7 @@
     /* NAV */
     nav {
       position: fixed;
-      top:0;
-      left:0;
-      right:0;
+      top:0; left:0; right:0;
       z-index:100;
       background: rgba(248, 249, 250, 0.92);
       backdrop-filter: blur(10px);
@@ -48,25 +46,15 @@
       justify-content:space-between;
     }
     .nav-home {
-      font-size:0.7rem;
-      font-weight:400;
-      letter-spacing:0.12em;
-      text-transform:uppercase;
-      color:var(--muted);
-      cursor:pointer;
-      border:none;
-      background:none;
-      padding:0;
-      transition:color 0.15s;
+      font-size:0.7rem; font-weight:400; letter-spacing:0.12em;
+      text-transform:uppercase; color:var(--muted); cursor:pointer;
+      border:none; background:none; padding:0; transition:color 0.15s;
       font-family:'Source Serif 4',Georgia,serif;
     }
     .nav-home:hover { color:var(--ink); }
     .nav-label {
-      font-size:0.7rem;
-      font-weight:400;
-      letter-spacing:0.06em;
-      text-transform:none;
-      color:var(--muted);
+      font-size:0.7rem; font-weight:400; letter-spacing:0.06em;
+      text-transform:none; color:var(--muted);
       font-family:'Source Serif 4',Georgia,serif;
     }
 
@@ -74,257 +62,142 @@
     #landing { max-width:780px; margin:0 auto; padding:0 1.5rem; }
     .landing-header { padding:7rem 0 2.5rem; border-bottom:1px solid var(--rule); }
     .masthead-label {
-      font-size:0.72rem;
-      font-weight:400;
-      letter-spacing:0.08em;
-      text-transform:none;
-      color:var(--muted);
-      margin-bottom:0.85rem;
-      font-style:italic;
-      font-family:'Newsreader',Georgia,serif;
+      font-size:0.72rem; font-weight:400; letter-spacing:0.08em;
+      text-transform:none; color:var(--muted); margin-bottom:0.85rem;
+      font-style:italic; font-family:'Newsreader',Georgia,serif;
     }
     .landing-header h1 {
-      font-family:'Newsreader',Georgia,serif;
-      font-weight:400;
-      font-size:clamp(2rem,4.5vw,3rem);
-      line-height:1.15;
-      letter-spacing:0;
+      font-family:'Newsreader',Georgia,serif; font-weight:400;
+      font-size:clamp(2rem,4.5vw,3rem); line-height:1.15; letter-spacing:0;
     }
     .landing-header p {
-      margin-top:1rem;
-      font-size:0.95rem;
-      color:#182126;
-      max-width:520px;
-      line-height:1.7;
+      margin-top:1rem; font-size:0.95rem; color:#182126;
+      max-width:520px; line-height:1.7;
     }
     .section-label {
-      font-size:0.75rem;
-      font-weight:400;
-      letter-spacing:0.04em;
-      text-transform:none;
-      color:var(--muted);
-      padding:2.2rem 0 0.9rem;
-      border-bottom:1px solid var(--rule);
-      margin-bottom:1.5rem;
-      font-family:'Newsreader',Georgia,serif;
-      font-style:italic;
+      font-size:0.75rem; font-weight:400; letter-spacing:0.04em;
+      text-transform:none; color:var(--muted);
+      padding:2.2rem 0 0.9rem; border-bottom:1px solid var(--rule);
+      margin-bottom:1.5rem; font-family:'Newsreader',Georgia,serif; font-style:italic;
     }
     .cards { padding-bottom:6rem; display:flex; flex-direction:column; gap:1.5rem; }
 
     /* CARDS */
     .card {
-      background:var(--white);
-      border:1px solid var(--rule);
+      background:var(--white); border:1px solid var(--rule);
       padding:2.2rem 2.4rem 2rem;
-      display:grid;
-      grid-template-columns:1fr auto;
-      gap:0 2rem;
-      align-items:start;
-      cursor:pointer;
-      opacity:0;
-      transform:translateY(18px);
+      display:grid; grid-template-columns:1fr auto;
+      gap:0 2rem; align-items:start; cursor:pointer;
+      opacity:0; transform:translateY(18px);
       animation:rise 0.55s ease forwards;
       transition:border-color 0.2s, box-shadow 0.2s, transform 0.2s, background 0.2s;
     }
     .card:hover {
-      border-color:var(--accent);
-      border-left:3px solid var(--accent);
+      border-color:var(--accent); border-left:3px solid var(--accent);
       box-shadow:0 6px 14px rgba(17, 22, 27, 0.035);
-      background:#fafdfe;
-      transform:translateY(-1px);
+      background:#fafdfe; transform:translateY(-1px);
     }
     .card:nth-child(1){animation-delay:0.1s}
     .card:nth-child(2){animation-delay:0.22s}
-    .card:nth-child(3){animation-delay:0.1s}
+    .card:nth-child(3){animation-delay:0.34s}
+    .card:nth-child(4){animation-delay:0.1s}
     @keyframes rise { to { opacity:1; transform:translateY(0); } }
     .card-meta {
-      font-size:0.75rem;
-      font-weight:400;
-      letter-spacing:0.04em;
-      text-transform:none;
-      color:var(--accent);
-      margin-bottom:0.55rem;
+      font-size:0.75rem; font-weight:400; letter-spacing:0.04em;
+      text-transform:none; color:var(--accent); margin-bottom:0.55rem;
       font-family:'Source Serif 4',Georgia,serif;
     }
     .card h2 {
-      font-family:'Newsreader',Georgia,serif;
-      font-weight:500;
-      font-size:1.2rem;
-      line-height:1.3;
-      margin-bottom:0.7rem;
+      font-family:'Newsreader',Georgia,serif; font-weight:500;
+      font-size:1.2rem; line-height:1.3; margin-bottom:0.7rem;
     }
     .card-desc {
-      font-size:0.9rem;
-      line-height:1.72;
-      color:#182126;
-      max-width:520px;
+      font-size:0.9rem; line-height:1.72; color:#182126; max-width:520px;
     }
     .card-right {
-      grid-column:2;
-      grid-row:1/4;
-      display:flex;
-      flex-direction:column;
-      align-items:flex-end;
-      gap:0.5rem;
-      padding-top:0.2rem;
+      grid-column:2; grid-row:1/4;
+      display:flex; flex-direction:column;
+      align-items:flex-end; gap:0.5rem; padding-top:0.2rem;
     }
     .read-btn {
-      display:inline-flex;
-      align-items:center;
-      gap:0.45rem;
-      font-family:'Source Serif 4',Georgia,serif;
-      font-weight:400;
-      font-size:0.78rem;
-      letter-spacing:0.04em;
-      text-transform:none;
-      color:#1c252b;
-      border:1px solid #1c252b;
-      padding:0.5rem 1rem;
-      white-space:nowrap;
-      background:none;
-      cursor:pointer;
-      transition:background 0.18s,color 0.18s,border-color 0.18s;
-      text-decoration:none;
+      display:inline-flex; align-items:center; gap:0.45rem;
+      font-family:'Source Serif 4',Georgia,serif; font-weight:400;
+      font-size:0.78rem; letter-spacing:0.04em; text-transform:none;
+      color:#1c252b; border:1px solid #1c252b; padding:0.5rem 1rem;
+      white-space:nowrap; background:none; cursor:pointer;
+      transition:background 0.18s,color 0.18s,border-color 0.18s; text-decoration:none;
     }
     .read-btn:hover { background:var(--ink); color:var(--cream); border-color:var(--ink); }
     .read-btn svg { width:11px; height:11px; flex-shrink:0; }
     .read-btn.secondary { border-color:var(--muted); color:var(--muted); }
     .read-btn.secondary:hover { background:var(--muted); color:var(--cream); }
 
-.article-links {
-  display:flex;
-  gap:0.7rem;
-  flex-wrap:wrap;
-  margin-bottom:2rem;
-}
-
-.article-link-btn {
-  display:inline-flex;
-  align-items:center;
-  gap:0.45rem;
-  font-family:'Source Serif 4',Georgia,serif;
-  font-size:0.78rem;
-  color:#1c252b;
-  border:1px solid #c9d0d4;
-  padding:0.5rem 0.9rem;
-  background:#ffffff;
-  cursor:pointer;
-  transition:all 0.18s;
-}
-
-.article-link-btn:hover {
-  border-color:var(--accent);
-  color:var(--accent);
-  background:#fafdfe;
-}
-
-.article-link-btn.back-link {
-  border-color: var(--accent);
-  color: var(--accent);
-}
+    .article-links {
+      display:flex; gap:0.7rem; flex-wrap:wrap; margin-bottom:2rem;
+    }
+    .article-link-btn {
+      display:inline-flex; align-items:center; gap:0.45rem;
+      font-family:'Source Serif 4',Georgia,serif; font-size:0.78rem;
+      color:#1c252b; border:1px solid #c9d0d4; padding:0.5rem 0.9rem;
+      background:#ffffff; cursor:pointer; transition:all 0.18s;
+    }
+    .article-link-btn:hover { border-color:var(--accent); color:var(--accent); background:#fafdfe; }
 
     /* ARTICLE */
     #article-view { max-width:680px; margin:0 auto; padding:0 1.5rem; }
     .article-header { padding:7rem 0 2rem; border-bottom:1px solid var(--rule); margin-bottom:3rem; }
     .article-meta {
-      font-size:0.75rem;
-      font-weight:400;
-      letter-spacing:0.04em;
-      text-transform:none;
-      color:var(--accent);
-      margin-bottom:0.9rem;
-      font-family:'Newsreader',Georgia,serif;
-      font-style:italic;
+      font-size:0.75rem; font-weight:400; letter-spacing:0.04em;
+      text-transform:none; color:var(--accent); margin-bottom:0.9rem;
+      font-family:'Newsreader',Georgia,serif; font-style:italic;
     }
     .article-header h1 {
-      font-family:'Newsreader',Georgia,serif;
-      font-weight:400;
-      font-size:clamp(1.6rem,3.5vw,2.2rem);
-      line-height:1.2;
-      letter-spacing:0;
-      margin-bottom:1.2rem;
+      font-family:'Newsreader',Georgia,serif; font-weight:400;
+      font-size:clamp(1.6rem,3.5vw,2.2rem); line-height:1.2; letter-spacing:0; margin-bottom:1.2rem;
     }
     .article-body { padding-bottom:6rem; }
     .article-body p {
-      font-size:1.05rem;
-      line-height:1.92;
-      margin-bottom:1.6rem;
-      color:#11181d;
-      font-weight:400;
+      font-size:1.05rem; line-height:1.92; margin-bottom:1.6rem;
+      color:#11181d; font-weight:400;
     }
     .article-body p sup { font-size:0.65rem; color:var(--accent); vertical-align:super; line-height:0; }
     .article-body h2 {
-      font-family:'Newsreader',Georgia,serif;
-      font-weight:500;
-      font-size:1.15rem;
-      line-height:1.3;
-      margin:2.5rem 0 1rem;
-      color:var(--ink);
+      font-family:'Newsreader',Georgia,serif; font-weight:500;
+      font-size:1.15rem; line-height:1.3; margin:2.5rem 0 1rem; color:var(--ink);
     }
     .article-body h3 {
-      font-family:'Source Serif 4',Georgia,serif;
-      font-weight:400;
-      font-size:0.8rem;
-      letter-spacing:0.07em;
-      text-transform:uppercase;
-      color:var(--muted);
-      margin:2rem 0 0.75rem;
+      font-family:'Source Serif 4',Georgia,serif; font-weight:400;
+      font-size:0.8rem; letter-spacing:0.07em; text-transform:uppercase;
+      color:var(--muted); margin:2rem 0 0.75rem;
     }
     .article-body ul { margin:0 0 1.6rem 1.2rem; }
     .article-body ul li {
-      font-size:1.05rem;
-      line-height:1.92;
-      margin-bottom:0.4rem;
-      color:#11181d;
-      font-weight:400;
+      font-size:1.05rem; line-height:1.92; margin-bottom:0.4rem; color:#11181d; font-weight:400;
     }
     .article-body ul li sup { font-size:0.65rem; color:var(--accent); vertical-align:super; line-height:0; }
     .article-divider { width:3.5rem; height:1.5px; background:var(--rule); margin:2.5rem 0; }
     .article-pull {
-      font-family:'Newsreader',Georgia,serif;
-      font-style:italic;
-      font-size:1.15rem;
-      line-height:1.6;
-      color:var(--ink);
-      border-left:2px solid var(--accent);
-      padding-left:1.3rem;
-      margin:2.5rem 0;
+      font-family:'Newsreader',Georgia,serif; font-style:italic;
+      font-size:1.15rem; line-height:1.6; color:var(--ink);
+      border-left:2px solid var(--accent); padding-left:1.3rem; margin:2.5rem 0;
     }
     .rec-box { border:1px solid var(--rule); background:var(--white); padding:1.4rem 1.6rem; margin:0.6rem 0; }
     .rec-box strong { font-weight:500; display:block; margin-bottom:0.4rem; font-size:0.9rem; }
     .rec-box p { font-size:0.9rem !important; margin-bottom:0 !important; color:var(--muted) !important; line-height:1.65 !important; }
     .footnotes { border-top:1px solid var(--rule); padding-top:1.8rem; margin-top:1rem; }
-    .footnotes p {
-      font-size:0.78rem !important;
-      line-height:1.6 !important;
-      color:var(--muted) !important;
-      margin-bottom:0.5rem !important;
-    }
+    .footnotes p { font-size:0.78rem !important; line-height:1.6 !important; color:var(--muted) !important; margin-bottom:0.5rem !important; }
     .footnotes-label {
-      font-size:0.72rem;
-      font-weight:400;
-      letter-spacing:0.04em;
-      text-transform:none;
-      color:var(--muted);
-      margin-bottom:1rem;
-      font-family:'Newsreader',Georgia,serif;
-      font-style:italic;
+      font-size:0.72rem; font-weight:400; letter-spacing:0.04em;
+      text-transform:none; color:var(--muted); margin-bottom:1rem;
+      font-family:'Newsreader',Georgia,serif; font-style:italic;
     }
 
-    /* CHART — bare Excel style */
-    .chart-wrap {
-      margin:2rem 0;
-      background:var(--white);
-      padding:1rem 0.5rem 0.5rem;
-    }
+    /* CHART */
+    .chart-wrap { margin:2rem 0; background:var(--white); padding:1rem 0.5rem 0.5rem; }
     .chart-title {
-      font-family:'Source Serif 4',Georgia,serif;
-      font-weight:400;
-      font-size:0.95rem;
-      text-align:center;
-      margin-bottom:0.6rem;
-      line-height:1.35;
-      color:var(--ink);
+      font-family:'Source Serif 4',Georgia,serif; font-weight:400;
+      font-size:0.95rem; text-align:center; margin-bottom:0.6rem;
+      line-height:1.35; color:var(--ink);
     }
     .chart-canvas-wrap { position:relative; width:100%; height:220px; }
     .chart-caption { margin-top:0.6rem; font-size:0.72rem; color:var(--muted); line-height:1.5; }
@@ -374,6 +247,17 @@
       </div>
     </article>
 
+    <article class="card" onclick="showArticle('spec-commercial')">
+      <div>
+        <p class="card-meta">Spec Script &nbsp;·&nbsp; Advertising &amp; Video</p>
+        <h2>Spec Commercial Script — Diabetes Supplement</h2>
+        <p class="card-desc">A 45-second spec commercial for an unbranded diabetes supplement, structured as a narrative vignette. Follows a middle-aged man navigating fatigue and daily medication routines before discovering a product through a coworker. Demonstrates storytelling for purpose-driven consumer health advertising.</p>
+      </div>
+      <div class="card-right">
+        <button class="read-btn">Read <svg viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </article>
+
     <p class="section-label" style="margin-top:1rem;">Research</p>
 
     <article class="card">
@@ -383,8 +267,8 @@
         <p class="card-desc">The analytical paper underlying the op-ed. Includes provincial case studies, projected grid load scenarios through 2035, and three policy recommendations for federal and provincial decision-makers.</p>
       </div>
       <div class="card-right">
-        <button class="read-btn" onclick="showArticle('brief-long')">Long Version <svg viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <button class="read-btn secondary" onclick="showArticle('brief-short')">Short Brief <svg viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="read-btn" onclick="event.stopPropagation();showArticle('brief-long')">Long Version <svg viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="read-btn secondary" onclick="event.stopPropagation();showArticle('brief-short')">Short Brief <svg viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       </div>
     </article>
   </div>
@@ -400,7 +284,7 @@
 </div>
 
 <script>
-/* ── CHART CONFIGS (bare Excel style) ── */
+/* ── CHART CONFIGS ── */
 const CHART_FONT = { family: 'Arial', size: 11 };
 const GRID_COLOR = '#d0d0d0';
 const TICK_COLOR = '#444';
@@ -418,59 +302,38 @@ function makeLineConfig() {
         {
           label: 'Hydroelectricity',
           data: hydroData,
-          borderColor: '#4472C4',
-          backgroundColor: '#4472C4',
-          pointBackgroundColor: '#ffffff',
-          pointBorderColor: '#4472C4',
-          pointBorderWidth: 1.5,
-          pointRadius: 3,
-          pointHoverRadius: 3,
-          borderWidth: 1.5,
-          tension: 0
+          borderColor: '#4472C4', backgroundColor: '#4472C4',
+          pointBackgroundColor: '#ffffff', pointBorderColor: '#4472C4',
+          pointBorderWidth: 1.5, pointRadius: 3, pointHoverRadius: 3,
+          borderWidth: 1.5, tension: 0
         },
         {
           label: 'Combustible Fuels',
           data: fuelData,
-          borderColor: '#ED7D31',
-          backgroundColor: '#ED7D31',
-          pointBackgroundColor: '#ffffff',
-          pointBorderColor: '#ED7D31',
-          pointBorderWidth: 1.5,
-          pointRadius: 4,
-          pointHoverRadius: 5,
-          borderWidth: 1.5,
-          tension: 0
+          borderColor: '#ED7D31', backgroundColor: '#ED7D31',
+          pointBackgroundColor: '#ffffff', pointBorderColor: '#ED7D31',
+          pointBorderWidth: 1.5, pointRadius: 4, pointHoverRadius: 5,
+          borderWidth: 1.5, tension: 0
         }
       ]
     },
     options: {
-      responsive: true,
-      maintainAspectRatio: false,
+      responsive: true, maintainAspectRatio: false,
       plugins: {
         legend: {
-          display: true,
-          position: 'bottom',
-          labels: {
-            font: CHART_FONT,
-            color: TICK_COLOR,
-            boxWidth: 16,
-            boxHeight: 2,
-            padding: 14,
-            usePointStyle: false
-          }
+          display: true, position: 'bottom',
+          labels: { font: CHART_FONT, color: TICK_COLOR, boxWidth: 16, boxHeight: 2, padding: 14, usePointStyle: false }
         },
         tooltip: { callbacks: { label: c => ` ${c.dataset.label}: ${c.parsed.y} TWh` } }
       },
       scales: {
         x: {
-          grid: { color: GRID_COLOR, lineWidth: 0.5 },
-          border: { color: GRID_COLOR },
+          grid: { color: GRID_COLOR, lineWidth: 0.5 }, border: { color: GRID_COLOR },
           ticks: { font: CHART_FONT, color: TICK_COLOR, maxRotation: 0 }
         },
         y: {
           min: 0, max: 500,
-          grid: { color: GRID_COLOR, lineWidth: 0.5 },
-          border: { color: GRID_COLOR },
+          grid: { color: GRID_COLOR, lineWidth: 0.5 }, border: { color: GRID_COLOR },
           ticks: { stepSize: 100, font: CHART_FONT, color: TICK_COLOR }
         }
       }
@@ -478,7 +341,6 @@ function makeLineConfig() {
   };
 }
 
-// Projection bar chart data (normal vs drought, 2025/2030/2035)
 const projLabels = ['Normal\n2025','Drought\n2025','Normal\n2030','Drought\n2030','Normal\n2035','Drought\n2035'];
 const hNorm = [347, 312.3, 380, 342.0, 410, 369.0];
 const hShort= [0,   34.7,  0,   38.0,  0,   41.0 ];
@@ -489,39 +351,34 @@ const projConfig = {
   data: {
     labels: projLabels,
     datasets: [
-      { label:'Hydro',          data: hNorm,  backgroundColor:'#4472C4', stack:'s' },
+      { label:'Hydro',           data: hNorm,  backgroundColor:'#4472C4', stack:'s' },
       { label:'Hydro Shortfall', data: hShort, backgroundColor:'#70AD47', stack:'s' },
       { label:'Remaining Load',  data: hRem,   backgroundColor:'#ED7D31', stack:'s' }
     ]
   },
   options: {
-    responsive: true,
-    maintainAspectRatio: false,
+    responsive: true, maintainAspectRatio: false,
     plugins: {
       legend: {
-        display: true,
-        position: 'bottom',
+        display: true, position: 'bottom',
         labels: { font: CHART_FONT, color: TICK_COLOR, boxWidth: 14, boxHeight: 10, padding: 14 }
       },
       tooltip: { callbacks: { label: c => ` ${c.dataset.label}: ${c.parsed.y} TWh` } }
     },
     scales: {
       x: {
-        grid: { display: false },
-        border: { color: GRID_COLOR },
+        grid: { display: false }, border: { color: GRID_COLOR },
         ticks: { font: { family:'IBM Plex Sans', size:10 }, color: TICK_COLOR, maxRotation: 0 }
       },
       y: {
         min: 0, max: 800,
-        grid: { color: GRID_COLOR, lineWidth: 0.5 },
-        border: { color: GRID_COLOR },
+        grid: { color: GRID_COLOR, lineWidth: 0.5 }, border: { color: GRID_COLOR },
         ticks: { stepSize: 100, font: CHART_FONT, color: TICK_COLOR }
       }
     }
   }
 };
 
-/* ── CHART HTML SNIPPETS ── */
 const lineChartHTML = (id) => `
   <div class="chart-wrap">
     <p class="chart-title">Hydroelectric and combustible fuel generation, Canada, 2016–2025</p>
@@ -540,13 +397,8 @@ const projChartHTML = (id) => `
 
 const hydroBody = `
 <div class="article-links">
-  <button class="article-link-btn" onclick="showArticle('brief-short')">
-    View Short Brief
-  </button>
-
-  <button class="article-link-btn" onclick="showArticle('brief-long')">
-    View Analytical Paper
-  </button>
+  <button class="article-link-btn" onclick="showArticle('brief-short')">View Short Brief</button>
+  <button class="article-link-btn" onclick="showArticle('brief-long')">View Analytical Paper</button>
 </div>
   <p>Canada's electricity sector has a genuine success story to tell. Since 2005, greenhouse gas emissions from electricity generation have fallen by 58%, the single largest sectoral reduction anywhere in the Canadian economy.<sup>1</sup> In a normal year, more than 80% of the power flowing through Canadian homes and factories comes from non-emitting sources.<sup>2</sup> That is a real achievement, and one that shapes how Canada thinks about its broader path to net zero.</p>
   <p>But the phrase "a normal year" carries more weight than it might seem. As Canada pushes to electrify its economy (cars, heating, industry), the question of what happens in an abnormal year is becoming one of the most consequential in Canadian energy policy.</p>
@@ -583,33 +435,90 @@ const hydroBody = `
 `;
 
 const barbenBody = `
-  <h2> Streaming Didn't Kill the Blockbuster 
+  <h2>Streaming Didn't Kill the Blockbuster</h2>
   <p>How do you summarize the seismic shifts shaping the entertainment industry? "Unprecedented" was once acceptable, but the disruption launched by streaming giants like Netflix has had nearly a decade to become familiar. It has also long been touted as a theater-killer, though those predictions seem to have been premature. Rising ticket prices are indeed pushing some audiences toward streaming, but blockbusters continue to secure Hollywood the viewership it needs to stay profitable. Slower dramas may struggle in the current theatrical climate, but the box office runs of Dune: Part Two and last summer's Oppenheimer and Barbie (collectively dubbed "Barbenheimer") speak for themselves: the general public's appetite for fresh spectacle and the biggest screens available to present it is still very much alive.</p>
   <p>Alive, but not entirely well. The interesting question isn't whether the blockbuster is becoming extinct — it isn't — but what it now takes to make one. The answer, as Barbenheimer demonstrated more vividly than anything else in recent memory, has changed considerably since just a decade ago.</p>
   <p>The cultural context matters here. Filmmaking equipment has been democratized, the internet has allowed creators to bypass traditional studio pipelines, and the sheer volume of content available at any given moment makes it genuinely difficult for any single release to dominate the discourse. Monolithic blockbusters are rarer not because audiences have stopped wanting them, but because the attention landscape has splintered across streaming and social media. Not a fan of the latest action film? Ten thousand alternatives await you on Netflix and Prime Video. Cutting through the modern digital landscape simply requires more than just a large budget and a famous cast.</p>
   <div class="article-divider"></div>
-  <h2> How Social Media Virality Fueled a Blockbuster Box Office Run
+  <h2>How Social Media Virality Fueled a Blockbuster Box Office Run</h2>
   <p>What it requires, Barbenheimer showed, is engagement — and not the kind that traditional advertising reliably produces. The brilliance of that summer came as much from a novel digital marketing strategy as from artistic excellence. Pairing a bubblegum entertainer like Barbie with a somber historical drama like Oppenheimer shouldn't have worked as a cultural moment, and yet it did, precisely because the contrast was irresistible. It flooded the digital ecosystem with countless posts, presenting a textbook case of organic audience engagement. People didn't just pre-order tickets and put their phones away; they continued to talk about the films, theorize about them, make memes about them. Instagram, Twitter, Snapchat, podcasts, news headlines: the conversation was everywhere, self-sustaining and largely free.</p>
   <div class="article-pull">Hollywood hadn't engineered a marketing campaign so much as a genuine cultural event, one that cut across demographic lines and culminated in two releases that together made nearly $2.3 billion at the box office.</div>
-  <p>The lesson, then, is not simply "make good films and market them on social media." Studios have been doing versions of that for years with mixed results. The deeper takeaway is about what kind of conditions make a blockbuster possible, and how much of that can be intentionally created versus stumbled into.</p> 
+  <p>The lesson, then, is not simply "make good films and market them on social media." Studios have been doing versions of that for years with mixed results. The deeper takeaway is about what kind of conditions make a blockbuster possible, and how much of that can be intentionally created versus stumbled into.</p>
   <p>Barbenheimer succeeded because the contrast went beyond the surface. The distinction didn't just stop at biopic–comedy. It extended into Christopher Nolan–Greta Gerwig, directors who were both known for a very different kind of excellence. It also extended into the subject matter: on one hand, a global mascot who has always danced along the boundary between female empowerment and exploitation; and on the other, the man whose face became associated with the potential end of civilization.</p>
   <p>How do you make a crowd-pleaser about these two? The question lingered and grew, and as each teaser came and left the viewer even more perplexed, it grew even bigger. Ordinarily, that is a marketing catastrophe. But the talent and premises attached to Barbie and Oppenheimer quickly turned confusion into curiosity. The less that was known, the more there was to discuss, and every commentator, content creator, and social media admin sought to claim this space. The result? Virality.</p>
   <p>The fuel that took Barbenheimer to the stratosphere was marketing, but make no mistake: one cannot polish a Go Kart into a Voyager. Artistic potential gave both films the raw material for a viral marketing push, and artistic quality then supplied the legs for extended box office runs. Remove this intersection of commerce and art, and what's left is a cautionary tale, not a success story.</p>
   <div class="article-divider"></div>
-  <h2> The New Focus on Organic Audience Engagement 
+  <h2>The New Focus on Organic Audience Engagement</h2>
   <p>What can be carried from 2023 into the future is an underlying orientation: an understanding that the audience now lives online, that organic conversation is more valuable than paid outreach, and that the goal is to give people something worth talking about rather than something worth watching an ad for. The next blockbuster likely won't arrive only on billboards or in commercial breaks, but it also won't be the product of an algorithm that only understands data points. It will arrive when your coworkers, classmates, and neighbors bring it up unprompted, when think pieces and memes are already circulating before opening weekend, and when even people who haven't been to a theater in ages find themselves captivated and compelled to weigh in.</p>
   <p>That kind of cultural saturation is difficult to manufacture, but Barbenheimer proved it is still possible. It just requires pivoting to an approach that is both artistically ambitious and cognizant of the modern attention economy.</p>
 `;
 
+const specCommercialBody = `
+  <p>A spec commercial script for an unbranded diabetes supplement. The spot runs 45 seconds and follows a narrative vignette structure, building character empathy before transitioning into a direct product advertisement sequence.</p>
+  <p style="font-size:0.85rem;color:var(--muted);font-style:italic;">Format: Timecode | Scene | Action / VO / Dialogue / Text on Screen</p>
+
+  <div class="article-divider"></div>
+
+  <h2>0:00–0:07 &nbsp;·&nbsp; Opening Vignette — Bathroom + Car</h2>
+  <p>Close on a glucose monitor sitting on the counter. Beside it, a jar of diabetes pills. The reading is already on screen. A MAN stands in front of it: middle-aged, quiet. He sighs slowly.</p>
+  <p><em>VO: Always the same beginning.</em></p>
+  <p>Cut to: he drives in silence. His phone lights up.</p>
+  <p>PHONE NOTIFICATION: Reminder! Medication in 2 hours.</p>
+  <p>He glances down. Another sigh. He keeps driving.</p>
+
+  <div class="article-divider"></div>
+
+  <h2>0:07–0:17 &nbsp;·&nbsp; Office — Day</h2>
+  <p>The MAN stands by a water dispenser, mid-conversation with a coworker. He is trying to stay engaged.</p>
+  <p>MAN: And then I told him–</p>
+  <p>He pauses, out of breath. His phone lights up in his pocket.</p>
+  <p>PHONE NOTIFICATION: Reminder! Take your medication.</p>
+  <p>He looks up. Apologetic smile.</p>
+  <p>MAN: Excuse me.</p>
+  <p>He returns to his desk and takes his medication with a sip of water. Fatigue is settling in.</p>
+  <p><em>VO: Tired, even when you're doing everything right?</em></p>
+  <p>He notices something on a coworker's desk: a jar of diabetes medication and, beside it, [PRODUCT]. The desk's nameplate reads: SHARMA.</p>
+  <p>Off-screen, laughter. The man turns. Sharma stands relaxed and energized at the center of a small group.</p>
+  <p>COWORKER: You make it look easy.</p>
+  <p>The MAN looks back at [PRODUCT]. He types the name into his computer, considers what he's seeing, and —</p>
+  <p><em>VO: Maybe what you need is a boost.</em></p>
+  <p>— clicks to order.</p>
+
+  <div class="article-divider"></div>
+
+  <h2>0:17–0:19 &nbsp;·&nbsp; Home — Front Door</h2>
+  <p>A brief shot: the package arrives at the door. The MAN picks it up.</p>
+
+  <div class="article-divider"></div>
+
+  <h2>0:19–0:27 &nbsp;·&nbsp; Table — Product Advertisement Sequence</h2>
+  <p>The product sits on a table in front of the MAN. Close on the table with a top-down angle. We begin a clean product sequence.</p>
+  <p>PLACEHOLDER: Direct product advertisement. Pack shot — Key benefits and feature callouts — Ingredient or value highlights — Short proof points or usage guidance.</p>
+  <p><em>VO: Clear. Direct. Built to show what makes [PRODUCT] useful and different.</em></p>
+  <p>TEXT ON SCREEN: [Benefit 1] &nbsp; [Benefit 2] &nbsp; [Benefit 3]</p>
+  <p>The sequence resolves. We return to the MAN sitting at the table, looking at the product in front of him.</p>
+
+  <div class="article-divider"></div>
+
+  <h2>0:27–0:40 &nbsp;·&nbsp; Closing Montage — Evening into Morning</h2>
+  <p>Evening. The man takes [PRODUCT]. On the couch with family, calmer, more present.</p>
+  <p>Next morning. He's in his car again. His phone lights up. He glances at it and then sets it down. No sigh. A faint smile.</p>
+  <p>Bathroom. The same counter as before. The camera pans to show the [PRODUCT] now sitting alongside the diabetes medication. The man looks at it, then at himself in the mirror.</p>
+  <p><em>VO: Because managing your condition shouldn't mean running on empty.</em></p>
+  <p>TEXT ON SCREEN: More Energy. &nbsp; More Balance. &nbsp; More Life.</p>
+
+  <div class="article-divider"></div>
+
+  <h2>0:40–0:45 &nbsp;·&nbsp; End Card</h2>
+  <p><em>VO: Try [PRODUCT] today.</em></p>
+  <p>TEXT ON SCREEN: Learn more about [PRODUCT].</p>
+  <p>CTA BUTTON / LINK: Shop Now &nbsp;|&nbsp; Learn More &nbsp;|&nbsp; Visit Website</p>
+`;
+
 const briefLongBody = `
 <div class="article-links">
-  <button class="article-link-btn" onclick="showArticle('brief-short')">
-    View Short Brief
-  </button>
-
-  <button class="article-link-btn" onclick="showArticle('hydro')">
-    View Op-Ed
-  </button>
+  <button class="article-link-btn" onclick="showArticle('brief-short')">View Short Brief</button>
+  <button class="article-link-btn" onclick="showArticle('hydro')">View Op-Ed</button>
 </div>
 
   <h2>Summary</h2>
@@ -669,16 +578,9 @@ const briefLongBody = `
 `;
 
 const briefShortBody = `
-<!-- ADD THIS TO THE VERY TOP OF briefShortBody -->
-
 <div class="article-links">
-  <button class="article-link-btn" onclick="showArticle('brief-long')">
-    View Analytical Paper
-  </button>
-
-  <button class="article-link-btn" onclick="showArticle('hydro')">
-    View Op-Ed
-  </button>
+  <button class="article-link-btn" onclick="showArticle('brief-long')">View Analytical Paper</button>
+  <button class="article-link-btn" onclick="showArticle('hydro')">View Op-Ed</button>
 </div>
 
   <h2>Executive Summary</h2>
@@ -739,10 +641,11 @@ const briefShortBody = `
 
 /* ── ARTICLES MAP ── */
 const articles = {
-  hydro:       { meta:'Op-Ed · Energy Policy',      title:"Canada's Clean Grid Has a Rainy-Day Problem",                                               body: hydroBody },
-  barbenheimer:{ meta:'Article · Culture & Media',     title:'What made Barbenheimer a Phenomenon and Lesson',                                    body: barbenBody },
-  'brief-long': { meta:'Policy Brief · Energy & Climate', title:'The Hydro-Emissions Tension: Addressing Structural Vulnerabilities in Canada\'s Net-Zero Transition — Long Version', body: briefLongBody },
-  'brief-short':{ meta:'Policy Brief · Energy & Climate', title:'The Hydro-Emissions Tension: Addressing Structural Vulnerabilities in Canada\'s Net-Zero Transition — Short Brief',   body: briefShortBody }
+  hydro:            { meta:'Op-Ed · Energy Policy',          title:"Canada's Clean Grid Has a Rainy-Day Problem",                                                                          body: hydroBody },
+  barbenheimer:     { meta:'Article · Culture & Media',       title:'What Made Barbenheimer a Phenomenon and Lesson',                                                                      body: barbenBody },
+  'spec-commercial':{ meta:'Spec Script · Advertising & Video', title:'Spec Commercial Script — Diabetes Supplement',                                                                     body: specCommercialBody },
+  'brief-long':     { meta:'Policy Brief · Energy & Climate', title:"The Hydro-Emissions Tension: Addressing Structural Vulnerabilities in Canada's Net-Zero Transition — Long Version",  body: briefLongBody },
+  'brief-short':    { meta:'Policy Brief · Energy & Climate', title:"The Hydro-Emissions Tension: Addressing Structural Vulnerabilities in Canada's Net-Zero Transition — Short Brief",    body: briefShortBody }
 };
 
 /* ── CHART REGISTRY ── */
@@ -771,58 +674,39 @@ function buildCharts(id) {
 }
 
 /* ── NAVIGATION ── */
-
 function updateURL(id = '') {
-  if (!id) {
-    history.replaceState(null, '', window.location.pathname);
-  } else {
-    history.replaceState(null, '', `#${id}`);
-  }
+  if (!id) history.replaceState(null, '', window.location.pathname);
+  else history.replaceState(null, '', `#${id}`);
 }
 
 function showLanding() {
   destroyCharts();
-
   document.getElementById('landing').classList.add('active');
   document.getElementById('article-view').classList.remove('active');
-
   document.getElementById('nav-label').textContent = 'Writing Samples';
-
   updateURL();
-
   window.scrollTo(0,0);
 }
 
 function showArticle(id) {
   destroyCharts();
-
   const a = articles[id];
   if (!a) return;
-
   document.getElementById('article-meta').textContent = a.meta;
   document.getElementById('article-title').textContent = a.title;
   document.getElementById('article-body').innerHTML = a.body;
-
   document.getElementById('nav-label').textContent = '';
-
   document.getElementById('landing').classList.remove('active');
   document.getElementById('article-view').classList.add('active');
-
   updateURL(id);
-
   window.scrollTo(0,0);
-
   buildCharts(id);
 }
 
 /* ── DIRECT URL SUPPORT ── */
-
 window.addEventListener('DOMContentLoaded', () => {
   const hash = window.location.hash.replace('#', '');
-
-  if (hash && articles[hash]) {
-    showArticle(hash);
-  }
+  if (hash && articles[hash]) showArticle(hash);
 });
 </script>
 </body>
